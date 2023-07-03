@@ -30,4 +30,5 @@
 
 ## GUI紙芝居
 ### 予約登録画面
-<img src="C:\Users\okumi\java_hello\security\rakuraku_kitchen\ユースケース\images\スクリーンショット 2023-06-26 113258.png">
+![image](https://github.com/urakawa-es5/security/assets/103549087/086b8fbe-b79e-41bd-a441-45f46379b44d)
+
