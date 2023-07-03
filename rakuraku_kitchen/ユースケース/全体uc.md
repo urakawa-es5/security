@@ -14,3 +14,4 @@
 ・[６：レシピを表示する](https://github.com/urakawa-es5/security/blob/main/rakuraku_kitchen/%E3%83%A6%E3%83%BC%E3%82%B9%E3%82%B1%E3%83%BC%E3%82%B9/recip.md)  
 ・[７：予約を登録する](https://github.com/urakawa-es5/security/blob/main/rakuraku_kitchen/%E3%83%A6%E3%83%BC%E3%82%B9%E3%82%B1%E3%83%BC%E3%82%B9/usecase_reserve.md)   
 ・[８：予約を確認する](https://github.com/urakawa-es5/security/blob/main/rakuraku_kitchen/%E3%83%A6%E3%83%BC%E3%82%B9%E3%82%B1%E3%83%BC%E3%82%B9/%E4%BA%88%E7%B4%84%E3%82%92%E3%81%BF%E3%82%8Btxt)
+・[９：予約を確認する]
