@@ -10,6 +10,7 @@ public class Order {
     private Long id;
 
     private String order;
+    private String menu;
     private String orderstatus;
 
     // コンストラクタ、getter、setterなどは省略
