@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>オーダー状況</title>
+</head>
+
+<body>
+    <h1>オーダー状況</h1>
+
+    <h2>配膳完了</h2>
+    <tr>
+        <td>料理A</td>
+    </tr>
+
+
+
+    <h2>料理完了</h2>
+    <tr>
+        <td>料理B</td>
+    </tr>
+
+
+    <h2>料理未提供</h2>
+    <tr>
+        <td>料理C</td>
+    </tr>
+    
+
+
+    <p>
+        <a th:href="@{/order_resistration}">オーダー登録画面</a>
+        <a th:href="@{/rakuraku_home}">戻る</a>
+    </p>
+
+</body>
+
+</html>
