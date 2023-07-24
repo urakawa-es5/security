@@ -39,17 +39,17 @@
   <body>
     <h1>予約登録画面</h1>
     <p>条件を入力する</p>
-    <form action="">
+    <form th:action="${@/reservation}">
       <div class="inputArea">
         <input type="text" placeholder="氏名" />
         <input type="text" placeholder="日時" />
         <input type="text" placeholder="人数" />
         <input type="text" placeholder="コース" />
       </div>
+      <div class="buttonArea">
+        <a href="">戻る</a>
+        <iput type="submit">登録</iput>
+      </div>
     </form>
-    <div class="buttonArea">
-      <a href="">戻る</a>
-      <a href="">登録</a>
-    </div>
   </body>
 </html>
