@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>メニュー登録</title>
+</head>
+
+<body>
+    <h1>メニュー登録</h1>
+    <form th:action="@{/read10}" th:object="${MenuRegistration}" method="post">
+        <table>
+            <tr>
+                <td>料理名：</td>
+                <!-- <td><input type="text" th:field="*{dish_name}"></td> -->
+            </tr>
+            <tr>
+                <td>食材:</td>
+                <!-- <td><input type="text" th:field="*{ingredient}"></td> -->
+            </tr>
+            <tr>
+                <td>提供重み:</td>
+                <!-- <td><input type="text" th:field="*{offer_weight}"></td> -->
+            </tr>
+            <tr>
+                <td>レシピ:</td>
+                <!-- <td><textarea th:field="*{recipe}" cols="40" rows="8"></textarea></td> -->
+            </tr>
+        </table>
+        <p>
+            <a th:href="@{/home}">戻る</a>
+            <input type="submit" value="登録">
+        </p>
+    </form>
+</body>
+
+</html>
