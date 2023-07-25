@@ -3,13 +3,15 @@ package com.example.demo.service;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.example.demo.repository.ReservationRepository;
 import com.example.demo.entity.Reservation;
 
 @Service
 public class ReservationService {
-    private ReservationRepository repo;
+    @Autowired
+    ReservationRepository repo;
 
     public List<Reservation> getAllReservations() {
         Iterable<Reservation> found = repo.findAll();
@@ -18,15 +20,8 @@ public class ReservationService {
         return list;
     }
 
-    public Reservation registerReservation(String name, int numberOfPeople, String dateTime, String selectedCourse) {
-        // Entityのインスタンスを作成して予約情報を登録
-        Reservation reservation = new Reservation();
-        reservation.setName(name);
-        reservation.setNumberOfPeople(numberOfPeople);
-        reservation.setDateTime(dateTime);
-        reservation.setSelectedCourse(selectedCourse);
-        return repo.save(reservation);
+    public Reservation registerReservation(Reservation r) {
+        return repo.save(r);
     }
 
-    // 他に必要なビジネスロジックを追加する
 }

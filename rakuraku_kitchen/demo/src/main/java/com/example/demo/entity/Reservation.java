@@ -18,6 +18,5 @@ public class Reservation {
     private String name;
     private int numberOfPeople;
     private String dateTime;
-    private String selectedCourse;
     // コンストラクタ、ゲッター、セッターなどを定義する
 }
