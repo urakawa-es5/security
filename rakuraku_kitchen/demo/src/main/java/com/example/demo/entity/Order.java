@@ -28,3 +28,4 @@ public class Order {
 
     // コンストラクタ、getter、setterなどは省略
 }
+

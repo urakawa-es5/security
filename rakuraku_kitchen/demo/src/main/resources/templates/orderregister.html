@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+  
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+        <meta charset="UTF-8">
+    <style>
+          body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .textbox {
+            border: 1px solid black;
+            padding: 10px;
+            width: 200px;
+            height: 100px;
+            background-color: #f0f0f0;
+            text-align: center;
+            margin: 10px;
+        }
+
+        .button {
+            margin-top: 10px;
+        }
+      
+    </style>
+</head>
+<body>
+    
+    <li th:each="t: ${search}">
+        <div class="container">
+            <div class="textbox">
+                <p>[[${t.dish_name}]]</p>
+       
+                <a href="anotherpage.html" class="button">登録</a>
+            </div>
+        </div>
+    </li>
+</body>

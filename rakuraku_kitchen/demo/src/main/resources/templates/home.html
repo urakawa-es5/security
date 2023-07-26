@@ -9,18 +9,26 @@
         <title>らくらくキッチン</title>
     
     <style>
-          body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
+        * {
+        margin: 0;
+        padding: 0;
+        }
+        header {
+                height: 100px;
+                width: 100%;
+                background-color: #07efa297;
+                color: rgb(237, 247, 241);
+                justify-content: center;
+                display: flex;
+             align-items: center;
+                
         }
 
         .container {
             display: flex;
             flex-direction: column;
             align-items: center;
+            
         }
 
         .textbox {
@@ -31,12 +39,24 @@
             background-color: #f0f0f0;
             text-align: center;
             margin: 10px;
-        }
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }    
+
+
+
+        
     </style>
 </head>
+    <header>
+        <h1 class="headline">
+            らくらくキッチン
+        </h1>
+
+    </header>
 <body>
-    <h1>らくらくキッチン</h1>
-    
+
     <div class="container">
     <a th:href="@{/read}">
         <div class="textbox">
