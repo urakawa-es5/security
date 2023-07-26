@@ -22,12 +22,13 @@ public class MenuController{
 
     @GetMapping("/read10")
     String showTsubuyakiList(Model model) {  
+        model.addAttribute("menuRegistration", new MenuRegistration());  //空フォームをセット
         return "menu_registration"; //リスト画面を返す
     }
 
 //つぶやきを投稿  
     @PostMapping("/read10")  
-    String postTsubuyaki(@ModelAttribute("tsubuyakiForm") MenuRegistration form, Model model) {  
+    String postMenu(@ModelAttribute("menuRegistration") MenuRegistration form, Model model) {  
         //フォームからエンティティに移し替え  
         Menu t = new Menu();  
         t.setDish_name(form.getDish_name());
