@@ -20,20 +20,51 @@
   </head>
   <body>
     <h1>予約一覧</h1>
-    <ul>
-      <li th:each="r: ${reservationList}">
-        [[${r.name}]]様 -- [[${r.numberOfPeople}]]人 -- [[${r.dateTime}]]
-      </li>
-    </ul>
+    
+        <table border="1">
+        <tr>
+            <th>名前</th>
+            <th>人数</th>
+            <th>時間</th>
+            <th>テーブル番号</th>
+            <th>料理</th>
+        </tr>
+      
+        <tr th:each="r: ${reservationList}">
+          <th> [[${r.name}]]様</th>
+          <th>[[${r.numberOfPeople}]]人</th>
+          <th>[[${r.dateTime}]]</th>
+          <th>[[${r.tablenumber}]]</th>
+          <th>[[${r.dishname}]]</th>
+        </tr>
+      </table>
+     
+      <h1>予約登録</h1>
     <form th:action="@{/read}" th:object="${reservationForm}" method="post">
-      <label for="name">お名前：</label>
-      <input type="text" th:field="*{name}" />
-      <label for="numberOfPeople">人数</label>
-      <input type="number" th:field="*{numberOfPeople}" />
-      <label for="datetime">日時</label>
-      <input type="datetime-local" th:field="*{dateTime}" />
+      <table>
+        <tr>
+          <td><label for="name">お名前：</label> </td>
+          <td> <input type="text" th:field="*{name}" /></td>
+        </tr>
+      <tr>
+      <td><label for="numberOfPeople">人数：</label></td>
+      <td><input type="number" th:field="*{numberOfPeople}" /></td>
+      </tr>
+      <tr>
+        <td><label for="datetime">日時：</label></td>
+        <td><input type="datetime-local" th:field="*{dateTime}" /></td>
+    </tr>
+  <tr>
+    <td> <label for="tablenumbe">テーブル番号：</label></td>
+      <td><input type="number" th:field="*{tablenumber}" /></td>
+    </tr>
+  <tr>
+    <td><label for="dishname">料理：</label></td>
+      <td><input type="text" th:field="*{dishname}" /></td>
+    </tr>
+      </table>
       <input type="submit" value="登録" />
     </form>
-    <a th:href="@{/}">戻る</a>
+    <a th:href="@{/}">ホームに戻る</a>
   </body>
 </html>

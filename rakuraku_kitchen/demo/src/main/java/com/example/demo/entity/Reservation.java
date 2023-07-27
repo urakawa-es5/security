@@ -18,5 +18,9 @@ public class Reservation {
     private String name;
     private int numberOfPeople;
     private String dateTime;
+    private String dishname;
+    private int tablenumber;
     // コンストラクタ、ゲッター、セッターなどを定義する
+    public void setTable_number(int tablenumber) {
+    }
 }

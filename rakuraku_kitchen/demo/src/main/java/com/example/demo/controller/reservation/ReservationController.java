@@ -31,6 +31,8 @@ public class ReservationController {
         r.setName(form.getName());
         r.setNumberOfPeople(form.getNumberOfPeople());
         r.setDateTime(form.getDateTime());
+        r.setDishname(form.getDishname());
+        r.setTablenumber(form.getTablenumber());
         rs.registerReservation(r);
         return "redirect:/read";
     }
