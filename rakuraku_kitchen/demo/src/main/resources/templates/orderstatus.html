@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>オーダー状況</title>
+</head>
+<body>
+    <h1>オーダー状況</h1>
+    <form th:action="@{/read6}" method="post">
+
+    
+
+    
+        <h2>料理前のオーダー</h2>
+        <ul>
+            <li th:each="o: ${beforeCookingOrders}">
+                [[${o.ordertime}]] -- [[${o.dishname}]] 
+                <button th:type="submit" th:value="${o.id}" th:name="getButtonValues1" th:attr="data-id=${o.id}" onclick="order1(this)">遷移する</button>
+            </li>
+        </ul>
+
+        <h2>料理完了のオーダー</h2>
+        <ul>
+            <li th:each="o: ${cookingCompletedOrders}">
+                [[${o.ordertime}]] -- [[${o.dishname}]] 
+                <button th:type="submit" th:value="${o.id}" th:name="getButtonValues1" th:attr="data-id=${o.id}" onclick="order1(this)">遷移する</button>
+            </li>
+        </ul>
+        
+        <h2>配膳完了のオーダー</h2>
+        <ul>
+            <li th:each="o: ${servingCompletedOrders}">
+                [[${o.ordertime}]] -- [[${o.dishname}]] 
+                <button th:type="submit" th:value="${o.id}" th:name="getButtonValues1" th:attr="data-id=${o.id}" onclick="order1(this)">遷移する</button>
+            </li>
+        </ul>
+
+    </form>
+    <a th:href="@{/read2}">
+        <div class="textbox">
+            オーダー登録
+        </div>
+    </a>
+    <a th:href="@{/}">戻る</a>
+    <script>
+        function order1(button) {
+            // ボタンのdata-dishid属性からdishのIDを取得
+            var id = button.getAttribute("data-id");
+                
+                alert("遷移しました。" );
+        }
+    
+    </script>
+</body>
+</html>
