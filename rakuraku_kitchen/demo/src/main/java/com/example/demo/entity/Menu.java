@@ -20,5 +20,13 @@ public class Menu {
     String ingredient; //食材
     Long offer_weight; //提供重み  
     String recipe; //レシピ 
+    
+    public String getDish_name() {
+        return dish_name;
+    }
+    public void setDish_name(String dish_name) {
+        this.dish_name = dish_name;
+    }
+    
 }
 
