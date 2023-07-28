@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>オーダー登録</title>
+</head>
+<body>
+    <h1>メニュー一覧</h1>
+    <form th:action="@{/read5}" method="post">
+        <ul>
+            <li th:each="m: ${menuLists}">
+                <span th:text="${m.dish_name}"></span>
+                <button th:type="submit" th:value="${m.dish_name}" th:name="getButtonValues" th:attr="data-dishname=${m.dish_name}" onclick="order(this)">登録する</button>
+            </li>
+        </ul>
+    </form>
+
+    <h2>ホームへ</h2>
+    <a th:href="@{/}">戻る</a>
+    <script>
+    function order(button) {
+        // ボタンのdata-dishid属性からdishのIDを取得
+        var dishName = button.getAttribute("data-dishname");
+            
+            alert("登録しました。料理名: " + dishName);
+    }
+
+    </script>
+
+</body>
+</html>
