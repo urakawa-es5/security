@@ -28,6 +28,7 @@
             <th>時間</th>
             <th>テーブル番号</th>
             <th>料理</th>
+            <th>削除</th>
         </tr>
       
         <tr th:each="r: ${reservationList}">
@@ -36,6 +37,7 @@
           <th>[[${r.dateTime}]]</th>
           <th>[[${r.tablenumber}]]</th>
           <th>[[${r.dishname}]]</th>
+          <th><a th:href="@{/read17/{id}(id=${r.id})}">削除</a></th>
         </tr>
       </table>
      

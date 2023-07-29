@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ja" , xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <title>メニュー一覧</title>
+</head>
+
+
+<body>
+    <h1>メニュー一覧</h1>
+    <li th:each="m: ${menuLists}">
+        [[${m.dish_name}]]
+       <a th:href="@{/read15/{id}(id=${m.id})}" th:object="${menuRegistration}" >
+        削除</a>
+    </li>
+</body>
+<a th:href="@{/read10}">前のページ</a>
+</html>

@@ -11,9 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-
-
-
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -77,6 +75,12 @@ public class OrderController2 {
         os.transforOrder(selectButtonValue1);
         return "redirect:/read1";
 
+    }
+    
+    @GetMapping("/read16/{id}")
+    String menudelete(@PathVariable Long id, Model model) {  
+    os.deleteOrder(id);
+    return "redirect:/read1";
     }
 
 

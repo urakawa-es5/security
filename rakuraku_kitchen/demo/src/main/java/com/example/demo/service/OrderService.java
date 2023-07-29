@@ -93,4 +93,12 @@ public class OrderService {
     public List<Orders> getBeforeCooking() {
         return getOrdersByStatus("料理前");
     }
+
+    private final  OrderRepository orderRepository;
+    public OrderService(OrderRepository orderRepository) {
+        this.orderRepository = orderRepository;
+    }
+    public void deleteOrder(Long id) {
+       orderRepository.deleteById(id);
+      }
 }

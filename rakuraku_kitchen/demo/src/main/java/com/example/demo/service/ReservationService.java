@@ -5,6 +5,8 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.example.demo.repository.OrderRepository;
 import com.example.demo.repository.ReservationRepository;
 import com.example.demo.entity.Reservation;
 
@@ -23,5 +25,13 @@ public class ReservationService {
     public Reservation registerReservation(Reservation r) {
         return repo.save(r);
     }
+
+    private final   ReservationRepository  reservationRepository;
+    public ReservationService(ReservationRepository reservationRepository) {
+        this.reservationRepository = reservationRepository;
+    }
+    public void deleteResevation(Long id) {
+      reservationRepository.deleteById(id);
+      }
 
 }
