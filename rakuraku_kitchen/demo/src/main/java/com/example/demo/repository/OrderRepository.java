@@ -10,4 +10,5 @@ import com.example.demo.entity.Orders;
 public interface OrderRepository extends JpaRepository<Orders, Long> {
     // ここに必要なカスタムクエリやメソッドを追加できます
     List<Orders> findByStatus(String orders);
+    
 }

@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.example.demo.entity.Reservation;
@@ -35,6 +36,11 @@ public class ReservationController {
         r.setTablenumber(form.getTablenumber());
         rs.registerReservation(r);
         return "redirect:/read";
+    }
+    @GetMapping("/read17/{id}")
+    String menudelete(@PathVariable Long id, Model model) {  
+       rs.deleteResevation(id);
+       return "redirect:/read";
     }
 
 }

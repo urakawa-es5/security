@@ -29,9 +29,11 @@
         
         <h2>配膳完了のオーダー</h2>
         <ul>
-            <li th:each="o: ${servingCompletedOrders}">
-                [[${o.ordertime}]] -- [[${o.dishname}]] 
-                <button th:type="submit" th:value="${o.id}" th:name="getButtonValues1" th:attr="data-id=${o.id}" onclick="order1(this)">遷移する</button>
+            <li th:each="o: ${servingCompletedOrders}" >
+            
+                    [[${o.ordertime}]] -- [[${o.dishname}]] 
+                  
+                    <a th:href="@{/read16/{id}(id=${o.id})}">削除</a>
             </li>
         </ul>
 
@@ -47,8 +49,11 @@
             // ボタンのdata-dishid属性からdishのIDを取得
             var id = button.getAttribute("data-id");
                 
-                alert("遷移しました。" );
+            
+            alert("遷移しました。" );
         }
+
+
     
     </script>
 </body>
