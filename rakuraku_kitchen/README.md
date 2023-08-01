@@ -68,7 +68,7 @@ grant all on rakuraku.* to user1;
 ・オーダー状況  
 ・メニュー登録  
 
-画像
+画像  
 <img width="719" alt="image" src="https://github.com/urakawa-es5/security/assets/58736165/25ab74bf-6937-43ee-b001-28b7de024a43">
 
 ## 予約状況
@@ -76,7 +76,7 @@ grant all on rakuraku.* to user1;
 予約一覧で現在の予約状況が出る。  
 下側にある予約登録で新規の予約することができる。  
 
-画像
+画像   
 <img width="622" alt="image" src="https://github.com/urakawa-es5/security/assets/58736165/0a81cd36-f756-47b5-a3ab-19864965ee62">
 
 
@@ -89,19 +89,21 @@ grant all on rakuraku.* to user1;
 ・配膳完了のオーダー  
 遷移ボタンを押すことで状態が変化する。 
 
-画像
+画像  
 <img width="458" alt="image" src="https://github.com/urakawa-es5/security/assets/58736165/8b91a21a-20a5-42a8-8c7d-a450cd41f9aa">
 
 ### オーダー登録方法  
 オーダー登録ボタンでオーダー登録画面に移動できる。  
 オーダー登録画面にメニューごとに登録ボタンが存在し、ボタンを押すことで登録される。 
 
-画像
+画像   
 <img width="214" alt="image" src="https://github.com/urakawa-es5/security/assets/58736165/11f1c696-0df3-4bce-9eba-1f5be5b7d679">
 
 ## メニュー登録  
 メニュー情報を登録する。  
 メニュー一覧で登録したメニューを見ることができる。  
+
+画像  
 <img width="415" alt="image" src="https://github.com/urakawa-es5/security/assets/58736165/2860b7f4-4b85-4f0f-a3a9-06d91d8a3f65">
 
 # 今後  
