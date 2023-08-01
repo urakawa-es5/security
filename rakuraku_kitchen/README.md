@@ -74,7 +74,7 @@ grant all on rakuraku.* to user1;
 ## 予約状況
 
 予約一覧で現在の予約状況が出る。  
-下側にある予約登録で新規の予約することができる。  
+下側にある予約登録で予約することができる。  
 
 画像   
 <img width="622" alt="image" src="https://github.com/urakawa-es5/security/assets/58736165/0a81cd36-f756-47b5-a3ab-19864965ee62">
